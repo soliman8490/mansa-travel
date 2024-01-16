@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="icon" href="img/airport.png">
+<link rel="stylesheet" href="mansa.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<title>mansa</title>
+</head>
+<body>
+<div class="background">
+<header>  
+    <nav class="nav">
+
+        <a href="#" class="navbar-brand"><img height="120px" width="130px" src="img/94365_1583060905.png" alt="brand"></a>
+        <img class="logo2" src="img/egypts-leading-online-travel-agency-2023-winner-shield-256.png" alt="">
+        <img class="logo2" src="img/egypts-leading-online-travel-agency-2023-winner-shield-256.png" alt="">
+        <!-- <img class="logo2" src="img/egypts-leading-online-travel-agency-2023-winner-shield-256.png" alt=""> -->
+        <ul class="">
+            <li class="navbar"><a class="nav-item nav-link" href="#">home</a></li>
+            <li class="navbar"><a class="nav-item nav-link" href="#">flight</a></li>
+            <li class="navbar"><a class="nav-item nav-link" href="#">hotel</a></li>
+            <li class="navbar"><a class="nav-item nav-link" href="#">cars</a></li>
+            <li class="navbar"><a class="nav-item nav-link" href="#">travelyalla</a></li>
+            
+            <li  class="navbar"><a style="margin-left: 80px;" id="Nationality" class="nav-item nav-link" href="#">Nationality <i class="fa-solid fa-angle-down "></i></a></li>
+            <li class="navbar"><a id="Nationality" class="nav-item nav-link" href="#">Currency <i class="fa-solid fa-angle-down "></i></a></li>
+            <li class="navbar"><a id="lang" class="nav-item nav-link" href="#">عربي<i id="global" style="margin-left: 3px;" class="fa-solid fa-globe "></i></a></li>
+            <li class="navbar"><a id="sign" class="nav-item nav-link" href="#"><i  class="fa-solid fa-user "></i></a></li>
+        </ul>
+
+        <!-- <div class="form">
+            <input list="countries" name="social">
+            <datalist id="countries">
+                <option value="egypt"></option>
+                <option value="egypt"></option>
+                <option value="egypt"></option>
+                <option value="egypt"></option>
+                <option value="egypt"></option>
+            </datalist>
+        </div> -->
+    </nav>
+
+
+
+<article>
+    <h2 >Travelyalla <span>Africa Winner</span></h2>
+    <h5>Leading OTA From WTA 2023</h5>
+</article>
+
+<article class="buttons">
+    <button style="color: white; background-color: #0970ce;" id="hotel" onclick="hotelClick()" class="btn"> <img src="img/hotel.png" width="15px" style="margin-bottom :5px;"> Hotels</button>
+    <button  id="flight" onclick="flightClick()" class="btn"><img src="img/offline.png" width="15px" style="margin-bottom: 5px;"> Flights</button>
+    <button  id="HotelsFlights" onclick="HotelsFlightsClick()" class="btn"><img src="img/running.png" width="15px" style="margin-bottom: 5px;"> Hotels + Flights</button>
+    <button id="Car" onclick="carrtingClick()" class="btn"><img src="img/car.png" width="15px"> Car Rental</button>
+</article>
+
+
+
+
+
+<form  class="booking">
+    <div  class="country"><i class="fa-solid fa-location-dot   "></i> Search By Destination 
+        <br>
+        <input required placeholder="inter your city or country  " class="btn btn-outline-light" type="text">
+    </div>
+
+    <div class="check"><i class="fa-solid fa-user "></i> Search By Destination
+        <br>
+        <input required style="margin-left: -30px;"  class="btn btn-outline-light" type="date">    
+        <input required style="margin-left: 30px;" class="btn btn-outline-light" type="date">    
+    </div>
+
+    <div class="number"><i class="fa-solid fa-calendar-check "></i> Search By Destination
+        <br>
+        <input required value="adults :0   children :0 " class="btn btn-outline-light" type="text">    
+        
+        <button style="height: 0; width: 0; border: none;"><i id="Search" class="fa-solid fa-search fa-1x "></i> </button>
+
+    </div>
+
+</form>
+
+
+
+    
+
+</article>
+
+<article style="display: none;" class="flightting">
+    <div id="buttons">
+        <button onclick="multi()">multi cities</button>
+        <button onclick="round()">round trip</button>
+        <button onclick="one()">one way</button>
+    </div>
+
+
+    <form class="flight_grid">
+    <div class="form"> from
+        <button style="height: 0; width: 0; border: none;"><i id="Search" class="fa-solid fa-search fa-1x "></i> </button>
+
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">    
+    </div>
+    <div  class="country"><i id="icons" class="fa-solid fa-calendar-check "></i>fly to
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Departure
+        <br>
+        <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">     
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Passengers
+        <br>
+        <input placeholder="No. Passengers" style="margin-left: -30px;"  class="btn btn-outline-light" type="number">       
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Class
+        <br>
+        <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">      
+    </div>
+</form>
+
+
+
+    <form class="Rounding">
+    <div class="form"><i id="icons" class="fa fa-location-dot" aria-hidden="true "></i> from
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">    
+    </div>
+    <div  class="country"><i id="icons" class="fa-solid fa-calendar-check "></i>fly to
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Departing - Returning
+        <br>
+        <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">     
+    </div>
+    <button style="height: 0; width: 0; border: none;"><i id="Search" class="fa-solid fa-search fa-1x "></i> </button>
+
+    <br>
+    <div  class="Passengers_num">
+        <i class="fas fa-people-roof" aria-hidden="true "></i>
+        <label for="Passenger">Passengers</label>
+        <input required type="number" value="Passenger">
+        <form action="">
+            <i class="fab fa-grav" aria-hidden="true "></i>
+            <select name="economy" id="economy">
+                <option value="first">first</option>
+                <option value="business">business</option>
+                <option value="economy">economy</option>
+            </select>
+        </form>
+    </div>
+
+
+</form>
+
+
+
+
+<form class="multi">
+    <div class="form">  from
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">    
+    </div>
+    <div  class="country"><i id="icons" class="fa-solid fa-calendar-check "></i>fly to
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Departure
+        <br>
+        <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">     
+    </div>
+    <br>
+    <div class="form"> <i id="Search" class="fa-solid fa-search fa-1x "></i> from
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">    
+    </div>
+    <div  class="country"><i id="icons" class="fa-solid fa-calendar-check "></i>fly to
+        <br>
+        <input required placeholder="city or airport" class="btn btn-outline-light" type="text">
+    </div>
+    <div class="check"><i id="icons" class="fa-solid fa-user "></i> Departure
+        <br>
+        <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">     
+    </div>
+
+    <br>
+    <div style="margin-left: 0px;" class="Passengers_num">
+    <i class="fas fa-people-roof" aria-hidden="true "></i>
+        <label for="Passenger">Passengers</label>
+        <input  type="number" value="Passenger">
+        <form  action="">
+            <i class="fab fa-grav" aria-hidden="true "></i>
+            <select name="economy" id="economy">
+                <option value="first">first</option>
+                <option value="business">business</option>
+                <option value="economy">economy</option>
+            </select>
+        </form>
+    </div>
+
+
+</form>
+
+
+</article>
+
+
+
+
+
+
+<form style="display: none;" class="Hotelflightting">
+    
+    <article  class="hotelGrid">
+        <div class="form"> from
+            <br>
+            <input required placeholder="city or airport" class="btn btn-outline-light" type="text">    
+        </div>
+        <div  class="country"><i class="fa-solid fa-calendar-check "></i>fly to
+            <br>
+            <input required placeholder="city or airport" class="btn btn-outline-light" type="text">
+        </div>
+        <div class="check"><i class="fa-solid fa-user "></i> Departure
+            <br>
+            <input style="margin-left: -30px;"  class="btn btn-outline-light" type="date">     
+        </div>
+        <button style="height: 0; width: 0; border: none;"><i id="Search" class="fa-solid fa-search fa-1x "></i> </button>
+
+
+    </article>
+    <div class="hotelGrid_checkbox" >
+        <input required type="checkbox" name="checkbox1" id="checkbox1">
+        <label for="checkbox1">Round Trip</label>
+        
+    <div  class="Passengers_num">
+        <i class="fas fa-people-roof" aria-hidden="true "></i>
+        <label for="Passenger">Passengers</label>
+        <input required type="number" value="Passenger">
+        <form action="">
+            <i class="fab fa-grav" aria-hidden="true "></i>
+            <select name="economy" id="economy">
+                <option value="economy">economy</option>
+                <option value="business">business</option>
+                <option value="first">first</option>
+            </select>
+        </form>
+    </div>
+    </div>
+</form>
+
+
+
+
+<article style="display: none;" class="carrting">
+
+<p>    If You Want To Rent A Car</p>
+
+<p>    Please Contact Us On</p>    
+
+<p>    Egypt Hotline :16715</p>   
+
+<p>    E-Mail :920009872</p>    
+
+<p>    KSA WhatsApp :00966538885351</p>
+</article>
+
+
+
+
+<script src="mansa.js"></script>
+</header>
+</body>
+</html>

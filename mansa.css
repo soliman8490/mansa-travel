@@ -1,0 +1,588 @@
+
+* {
+    margin: 0 ;
+    padding: 0;
+    transition: 500ms;
+    text-transform: capitalize;
+}
+
+html {
+        scroll-behavior:smooth ;
+        transition: 500ms;
+}
+
+
+::-webkit-scrollbar{
+    width: 3px;
+    
+}
+
+::-webkit-scrollbar-track{
+    background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #26618f;
+    border-radius: 5px; 
+}
+
+
+
+/* body {
+    background-image: url(img/jumbo-jet-flying-sky.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 80%;
+} */
+
+.background {
+background-image: url(img/jumbo-jet-flying-sky.jpg);
+background-size: cover;
+width: 100%;
+height: 100vh;
+}
+
+
+
+
+
+/* header */
+header {
+    z-index: 1000;
+}
+
+
+header nav ul {
+    display: flex;
+    /* margin: 30px auto; */
+    margin-left: 100px;
+}
+
+
+
+header nav ul li {
+    list-style-type: none;
+}   
+
+header nav ul li a{
+        color: black;
+    /* display: flex;
+    justify-content: space-between; */
+    margin-top: 40px;
+    border-radius: 15px;
+    font-weight: 600;
+    /* font-size: 14px; */
+    margin-right: -20px;
+}
+
+
+
+header nav ul li a:hover{
+    background-color: #4db3dfd2;             
+    color: white;
+    transition: 100ms;
+}
+
+
+.navbar-brand {
+    margin-right: 30px;
+}
+
+
+
+.logo2 {
+    height: 70px;
+    width: 60px;
+    margin-right: 10px;
+    margin-top:30px ;
+}
+
+
+#Nationality {
+margin-right: -40px;
+font-size: 14px;
+}
+
+#Nationality:hover {
+    background-color: rgba(27, 133, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+#Nationality:hover .fa-angle-down {
+    rotate: 180deg;
+}
+
+#lang:hover {
+    background-color: rgba(27, 133, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+#sign:hover {
+    background-color: rgba(27, 133, 255, 0);
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+/* title */
+
+div header article h2 {
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+div header article h2 span{
+color: #0970ce;
+}
+
+div header article h5 {
+    margin-left: 150px;
+}
+
+
+.buttons {
+margin-top: 130px;
+margin-left: 140px;
+position: relative;
+}
+
+.buttons .btn {
+    /* padding: 10px; */
+    background-color: white;
+    border-radius: 30px;
+    margin-left: 10px;
+    /* font-size: 14px; */
+    font-weight: 600;
+    padding: 7px;
+}
+
+/* .buttons .btn:focus {
+    outline: none;
+} */
+
+
+.booking {
+    background-color: white;
+    border-radius: 30px;
+    width: 80%;
+    height: 120px;
+    display: grid;
+    margin: auto;    
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    text-align: start;
+    animation: 300ms booktop ease-in;
+    position: relative;
+}
+
+@keyframes booktop {
+    from{margin-top: 30px;}
+    to{margin-top: 10px;}
+}
+
+
+
+
+/* not(:last-child) بتلغي المتحدد */
+.booking div:not(:nth-child(3)):not(:nth-child(4)) {  
+    border-right: 1px rgba(133, 133, 133, 0.733) solid;
+    height: 80px;
+}
+
+.booking div  {
+margin: 20px ;
+}
+
+
+.booking div input {
+margin: 20px -10px ;
+text-align: start;
+color: rgb(0, 0, 0);
+font-size: 14px;
+}
+
+#Search {
+    background-color: #0970ce;
+    border-radius: 100px;
+    color: white;
+    margin-left: 70px;
+    padding: 20px;
+    position: absolute;
+    bottom: 30px;
+    outline: 1px solid transparent;
+}
+#Search:hover {
+    cursor: pointer;
+    background-color: transparent;
+    outline: 1px solid #0970ce;
+    color: #0970ce;
+}
+
+
+
+/* flight */
+
+.flightting {
+    background-color: white;
+    border-radius: 30px;
+    width: 80%;
+    height: 100%;
+    margin: auto;    
+    margin-top: 10px;
+    text-align: end;
+    animation: 300ms flighttop ease-in;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    /* overflow: hidden; */
+    box-shadow: 0px 5px 20px -8px black;    
+
+}
+        
+.flight_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
+    /* box-shadow: 0px 0px 20px -10px black;     */
+
+    margin: auto;
+    width: 95%;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.flight_grid div:not(:nth-child(5)) {  
+    border-right: 1px rgba(133, 133, 133, 0.733) solid;
+    height: 130px;
+}
+
+.flight_grid div input {
+    margin: 20px -10px ;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+}
+
+.flight_grid #Search {
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+}
+
+.flight_grid .check {
+    margin-top: 0px;
+}
+
+
+
+
+.flightting  #buttons {
+    display: inline-flex;
+    justify-content: end;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.flightting  #buttons button{
+    margin-right: 10px;
+    padding: 2px 60px;
+    background-color: white;
+    border: solid transparent;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    filter: drop-shadow(1px 2.5px 2.5px #b3b3b3);
+    
+}
+
+.flightting  #buttons button:focus{
+    outline: none;
+    border-bottom:3px rgb(0, 120, 189) solid;
+    filter: drop-shadow(2px 5px 10px #b3b3b3);
+
+}
+
+
+
+
+
+    @keyframes flighttop {
+        from{margin-top: 30px;}
+        to{margin-top: 10px;}
+    }
+    
+
+
+
+/* Rounding */
+.Rounding {
+    margin-top: 10px;
+    display: none;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 20px -10px black;    
+    margin: auto;
+    width: 95%;
+    border-radius: 30px;
+    padding: 20px;
+    /* height: 100%; */
+    margin-bottom: 10px;
+}
+
+.Rounding div:not(:nth-child(3)):not(:nth-child(5)):not(.Passengers_num) {  
+    border-right: 1px rgba(133, 133, 133, 0.733) solid;
+    height: 130px;
+}
+
+
+.Rounding div input {
+    margin: 20px -10px ;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    }
+
+.Rounding #Search {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+
+
+.Passengers_num {
+    width: 150%;
+    margin-top: 10px;
+    margin-left: -250px;
+}
+
+.Passengers_num label {
+    margin-right: 15px;
+    color: #3333337e;
+}
+
+.Passengers_num input[type=number] {
+    border: transparent solid 1px;
+    background-color: #3333330e;
+    border-radius: 5px;
+    width: 60px;
+    margin-right: 30px ;
+}
+.Passengers_num input , form:focus {
+    outline: transparent solid 1px;
+    background-color: #3333330e;
+    border-radius: 5px;
+}
+
+.Passengers_num form {
+    display: inline;
+
+}
+/* .Passengers_num form select{
+    border: transparent solid 1px;
+    background-color: #3333330e;
+    border-radius: 5px;
+} */
+
+
+.Rounding .check {
+    margin-top: 3px;
+}
+
+
+/* multi */
+.multi {
+    margin-top: 10px;
+    display: none;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 20px -10px black;    
+    margin: auto;
+    width: 95%;
+    border-radius: 30px;
+    padding: 20px;
+    /* height: 100%; */
+    margin-bottom: 10px;
+}
+
+.multi div:not(:nth-child(4)):not(.Passengers_num):not(.check){  
+    border-right: 1px rgba(133, 133, 133, 0.733) solid;
+    height: 150px;
+    margin-top: 20px;
+}
+
+
+.multi div input {
+    margin: 20px -10px ;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    }
+
+.multi #Search {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+
+
+.check {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+    
+/* Hotelflighttingt */
+ 
+
+
+.Hotelflightting {
+    background-color: white;
+    border-radius: 30px;
+    width: 80%;
+    height: 100%;
+    margin: auto;    
+    margin-top: 10px;
+    text-align: end;
+    animation: 300ms carflighttop ease-in;
+    position: relative;
+    text-align: center;
+    padding-top: 20px;
+    /* overflow: hidden; */
+    box-shadow: 0px 5px 20px -8px black;   
+    
+}
+
+.hotelGrid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 0px 20px -10px black;    
+    margin: auto;
+    width: 95%;
+    border-radius: 30px;
+    padding: 20px;
+    /* height: 100%; */
+    margin-bottom: 10px;
+}
+
+.hotelGrid div:not(:nth-child(3)):not(:nth-child(5)) {  
+    border-right: 1px rgba(133, 133, 133, 0.733) solid;
+    height: 130px;
+}
+
+
+.hotelGrid div input {
+    margin: 20px -10px ;
+    text-align: start;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    }
+
+.hotelGrid #Search {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+}
+
+.hotelGrid .check {
+    margin-top: 0px;
+}
+
+
+
+    @keyframes carflighttop {
+        from{margin-top: 30px;}
+        to{margin-top: 10px;}
+    }
+    
+    
+
+.hotelGrid_checkbox {
+    text-align: start;
+    margin-left: 50px;
+    font-size: 18px;
+}
+
+.hotelGrid_checkbox .Passengers_num {
+    display: inline;
+    margin-left: 180px;
+}
+
+
+/* car */
+
+.carrting {
+    background-color: rgba(255, 255, 255, 0.733);
+    border-radius: 30px;
+    width: 80%;
+    height: 100%;
+    display: block;
+    margin: auto;    
+    margin-top: 10px;
+    text-align: start;
+    animation: 300ms flighttop ease-in;
+    position: relative;
+    box-shadow: 0px 5px 20px -8px black;    
+    text-align: center;
+    padding-top: 20px;
+    overflow: hidden;
+    list-style-type: none;
+    text-align: start;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 20px;
+}
+
+
+
+
+    @keyframes cartop {
+        from{margin-top: 30px;}
+        to{margin-top: 10px;}
+    }
+    
+
+
+
+    /* icons */
+
+    #icons {
+        color: #5e5e5e;
+        margin-right: 5px;
+        
+    }
+
+
+select {
+    padding: 2px; 
+    border-radius: 10px ; 
+    border: none; 
+    background-color: #a7a7a744;
+    
+}
